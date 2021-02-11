@@ -1,23 +1,34 @@
 import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import TopBar from './Components/Navbar/TopBar';
 
+import BodyCarousel from './Components/Carousel/BodyCarousel';
+import Training from './Components/Training/Training';
+import Message from './Components/Message/Message';
+import Footer from './Components/Footer/Footer';
+import { motion } from "framer-motion"
+import WhyUs from './Components/WhyUs/WhyUs';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <TopBar />
+      <BodyCarousel />
+      <WhyUs />
+      <h1 style={{
+        textAlign: "center",
+        margin: "2rem",
+        fontWeight: "800",
+        fontSize: "3rem"
+      }}>Our Courses</h1>
+      <Training />
+      <br></br>
+      <br></br>
+      <br></br>
+
+      <Message />
+
+      <Footer />
     </div>
   );
 }
